@@ -1,0 +1,1 @@
+cat lines | tr -d '\n' | grep -P -o '(?<=Westgate).*?(?=William)' | grep -P -o '(?<=>).*?(?=<)' | sed 's/ //g' | sed 's/:.*//' | sed 's/[ou]//g' | sed 's/$/ /g' | tr -d '\n' | sed 's/   [^ ]* [^ ]* /, /g' | sed 's/,/\n/g' | sed 's/^ //g' | sed 's/$/ ,/g' | awk 'BEGIN {FS=" "; OFS=" "} {print $3, $1, $5, $6, $4, $2, $5}' | sed 's/,/\n/g' | sed 's/^ //g' | sed 's/ /,/g' > lines.csv

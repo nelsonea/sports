@@ -1,0 +1,2 @@
+all:
+	wget espn.com/mens-college-basketball/lines
