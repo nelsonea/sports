@@ -1,5 +1,8 @@
-lines:
+espn:
 	make -f makefile.lines
 
-money:
-	make -f makefile.file
+westgate:
+	make -f makefile.westgate
+
+caesars:
+	make -f makefile.caesars
